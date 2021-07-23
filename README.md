@@ -15,12 +15,12 @@ Brief summary of the Solution implemented:
 3. Visualized all the columns using both histogram and boxplot to check the presence of outliers and did outlier treatment using "Interquartile range method" or IQR method.
 4. Visualized the correlation among all the features, dropped the one feature "Cylinders" which has more positive correlation with the "Engine volume" column and the latter one 
     is enough to explain the importance of the feature.
-5. Built a linear regression model, during the residual analysis found that Linear regression assumptions are not completely followed. The R2 scores of both train and test
-    data are very low i.e, in the range of 11-13% and the root mean squared log error (RMSLE) of both train and test data are in the range of 15-17% respectively.
+5. Built a linear regression model, during the residual analysis found that Linear regression assumptions are not completely followed. The R2 scores of both the train and test
+    data are very low i.e, in the range of 12-13% and the root mean squared log error (RMSLE) of both the train and test data are in the range of 17-18% respectively.
 6. As per the residual analysis, the linear regression model is not a best choice to do solve this multivariate regression problem. Hence, tried with Decision tree regressor
     algorithm.
-7. After experimenting with all the hyperparameters, got this combo (max_depth = 20, min_samples_leaf = 5, criterion = 'friedman_mse'), with which we got an R2 scores of 
-  train and test data are in the range of 94-95% and the root mean squared log error (RMSLE) of both train and test data are in the range of 3-4% respectively. 
+7. After experimenting with all the hyperparameters, got this combo (max_depth = 20, min_samples_leaf = 5, criterion = 'friedman_mse'), with which we got an R2 scores of both
+    the train and test data are  94% and the root mean squared log error (RMSLE) of both the train and test data are in the range of 4% respectively. 
 8. Saved the model to local disk using joblib library.
 9. Then loaded the actual test data, did similar data cleaning and feature engineering, and made predictions using the decision tree regressor model that we built on the training 
     data.
